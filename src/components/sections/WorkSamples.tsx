@@ -1,4 +1,3 @@
-
 import { Briefcase } from "lucide-react";
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
@@ -46,7 +45,7 @@ const workItems: WorkItem[] = [
     description: "Developed a professional website using Profreehost domain hosting and WordPress for layout design. Leveraged AI tools for content creation and design optimization, then integrated a custom chatbot using CSS and JavaScript plugins to enhance user interaction and engagement.",
     tags: ["WordPress", "CSS", "JavaScript", "AI Integration", "Chatbot Development"],
     link: "https://techtitans.liveblog365.com/?i=1",
-    image: "https://images.unsplash.com/photo-1531297484001-80022131f5a1"
+    image: "/lovable-uploads/98237d8c-0ef7-448a-a5c3-383bc8b2f61a.png"
   },
   {
     title: "Virtual Health Assistant App Prototype",
@@ -60,7 +59,7 @@ const workItems: WorkItem[] = [
     description: "Built an intelligent chatbot using Dialogflow Essentials for natural language processing and intent recognition. Integrated Firebase to handle all query requests from users by matching the intents created in Dialogflow Essentials, providing seamless conversational experiences.",
     tags: ["Dialogflow Essentials", "Firebase", "Natural Language Processing", "Intent Recognition", "Cloud Integration"],
     link: "https://console.dialogflow.com/api-client/demo/embedded/61d17128-9438-4e1d-966e-7f7f06e8a978",
-    image: "https://images.unsplash.com/photo-1461749280684-dccba630e2f6"
+    image: "/lovable-uploads/82d4a18d-291b-4963-a2ca-20cf04350240.png"
   },
   {
     title: "Project Coming Soon",

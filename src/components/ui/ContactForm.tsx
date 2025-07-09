@@ -1,59 +1,34 @@
 
-import { useState } from "react";
+import React from "react";
+import { useForm, ValidationError } from "@formspree/react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
-import { useToast } from "@/components/ui/use-toast";
+import { useToast } from "@/hooks/use-toast";
 
 const ContactForm = () => {
   const { toast } = useToast();
-  const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    subject: "",
-    message: "",
-  });
-  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [state, handleSubmit] = useForm("mjkrqjer");
 
-  const handleChange = (
-    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
-  ) => {
-    const { name, value } = e.target;
-    setFormData((prev) => ({
-      ...prev,
-      [name]: value,
-    }));
-  };
-
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    setIsSubmitting(true);
-
-    // This is where you would typically send the data to a server
-    // For now, we'll just simulate a submission
-    try {
-      await new Promise((resolve) => setTimeout(resolve, 1000));
+  // Show success message when form is successfully submitted
+  React.useEffect(() => {
+    if (state.succeeded) {
       toast({
         title: "Message sent!",
         description: "Thank you for your message. I'll get back to you soon.",
       });
-      setFormData({
-        name: "",
-        email: "",
-        subject: "",
-        message: "",
-      });
-    } catch (error) {
-      toast({
-        title: "Something went wrong",
-        description: "Please try again later.",
-        variant: "destructive",
-      });
-    } finally {
-      setIsSubmitting(false);
     }
-  };
+  }, [state.succeeded, toast]);
+
+  if (state.succeeded) {
+    return (
+      <div className="text-center p-8">
+        <h3 className="text-xl font-semibold mb-2">Thank you!</h3>
+        <p className="text-muted-foreground">Your message has been sent successfully. I'll get back to you soon.</p>
+      </div>
+    );
+  }
 
   return (
     <form onSubmit={handleSubmit} className="space-y-6">
@@ -65,8 +40,13 @@ const ContactForm = () => {
             name="name"
             placeholder="Your name"
             required
-            value={formData.name}
-            onChange={handleChange}
+            disabled={state.submitting}
+          />
+          <ValidationError 
+            prefix="Name" 
+            field="name"
+            errors={state.errors}
+            className="text-sm text-destructive"
           />
         </div>
         <div className="space-y-2">
@@ -77,8 +57,13 @@ const ContactForm = () => {
             type="email"
             placeholder="Your email"
             required
-            value={formData.email}
-            onChange={handleChange}
+            disabled={state.submitting}
+          />
+          <ValidationError 
+            prefix="Email" 
+            field="email"
+            errors={state.errors}
+            className="text-sm text-destructive"
           />
         </div>
       </div>
@@ -90,8 +75,13 @@ const ContactForm = () => {
           name="subject"
           placeholder="Subject"
           required
-          value={formData.subject}
-          onChange={handleChange}
+          disabled={state.submitting}
+        />
+        <ValidationError 
+          prefix="Subject" 
+          field="subject"
+          errors={state.errors}
+          className="text-sm text-destructive"
         />
       </div>
 
@@ -103,13 +93,22 @@ const ContactForm = () => {
           placeholder="Your message"
           required
           rows={6}
-          value={formData.message}
-          onChange={handleChange}
+          disabled={state.submitting}
+        />
+        <ValidationError 
+          prefix="Message" 
+          field="message"
+          errors={state.errors}
+          className="text-sm text-destructive"
         />
       </div>
 
-      <Button type="submit" className="w-full" disabled={isSubmitting}>
-        {isSubmitting ? "Sending..." : "Send Message"}
+      <Button 
+        type="submit" 
+        className="w-full" 
+        disabled={state.submitting}
+      >
+        {state.submitting ? "Sending..." : "Send Message"}
       </Button>
     </form>
   );

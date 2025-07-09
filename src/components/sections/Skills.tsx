@@ -1,5 +1,3 @@
-
-
 import { Star } from "lucide-react";
 
 interface SkillCategory {
@@ -73,4 +71,3 @@ const Skills = () => {
 };
 
 export default Skills;
-

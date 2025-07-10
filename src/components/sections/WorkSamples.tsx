@@ -78,9 +78,9 @@ const WorkSamples = () => {
           <h2 className="section-title">Work Samples</h2>
         </div>
         
-        <div className="grid md:grid-cols-2 lg:grid-cols-2 gap-8">
+        <div className="grid md:grid-cols-2 lg:grid-cols-2 gap-8 items-stretch">
           {workItems.map((item, index) => (
-            <Card key={index} className={`overflow-hidden transition-all hover:shadow-md ${item.comingSoon ? 'opacity-75' : ''}`}>
+            <Card key={index} className={`overflow-hidden transition-all hover:shadow-md flex flex-col justify-between ${item.comingSoon ? 'opacity-75' : ''}`} style={{ minHeight: 480 }}>
               {item.image && !item.comingSoon && (
                 <div className="aspect-video overflow-hidden bg-muted">
                   <img 
@@ -104,16 +104,25 @@ const WorkSamples = () => {
                 </div>
               </CardContent>
               {item.link && !item.comingSoon && (
-                <CardFooter>
-                  <Button variant="outline" size="sm" asChild>
-                    <a href={item.link} target="_blank" rel="noopener noreferrer">
+                <CardFooter className="flex items-end justify-center min-h-[90px] w-full mt-auto">
+                  <Button
+                    asChild
+                    variant="outline"
+                    size="sm"
+                    className="no-underline"
+                  >
+                    <a
+                      href={item.link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
                       View Project
                     </a>
                   </Button>
                 </CardFooter>
               )}
               {item.comingSoon && (
-                <CardFooter>
+                <CardFooter className="flex flex-col items-center justify-center min-h-[90px] w-full text-center gap-2">
                   <Button variant="outline" size="sm" disabled>
                     Coming Soon
                   </Button>

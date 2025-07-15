@@ -112,7 +112,7 @@ const TianChatbot = () => {
       { name: "Entrepreneurship", provider: "YES (Youth Employment Service)", date: "June 20, 2025", category: "Professional Development" }
     ],
     links: {
-      resume: "https://firebasestorage.googleapis.com/v0/b/dialogflow-chatbot-75b84.firebasestorage.app/o/CV%20Tian%20Josh%20Jacobs.pdf?alt=media&token=d984645a-28f1-4d50-a8aa-701fadc1f632",
+      resume: "https://firebasestorage.googleapis.com/v0/b/dialogflow-chatbot-75b84.firebasestorage.app/o/2025%20Candidate%20CV%20(Tian%20Jacobs).pdf?alt=media&token=d49d6b6c-f99d-4c6b-a412-e4206ce99ed2",
       degree: "https://firebasestorage.googleapis.com/v0/b/dialogflow-chatbot-75b84.firebasestorage.app/o/Degree.pdf?alt=media&token=e2dd275d-749e-4072-906c-6481458ddfd9",
       linkedin: "https://www.linkedin.com/in/tian-jacobs",
       github: "https://github.com/TianJacobs"
@@ -134,7 +134,7 @@ const TianChatbot = () => {
     if (q.includes('who') || q.includes('about') || q.includes('bio') || q.includes('background')) {
       return {
         type: 'personal',
-        content: `**About Tian Jacobs** 🌟\n\n${knowledgeBase.personal.bio}\n\n**Background:**\n${knowledgeBase.personal.journey}\n\n**Education:** ${knowledgeBase.personal.education}\n\n**Current Program:** Participating in CAPACITI's program for tech skills development.`
+        content: `About Tian Jacobs 🌟\n\n${knowledgeBase.personal.bio}\n\nBackground:\n${knowledgeBase.personal.journey}\n\nEducation: ${knowledgeBase.personal.education}\n\nCurrent Program: Participating in CAPACITI's program for tech skills development.`
       };
     }
 
@@ -142,22 +142,22 @@ const TianChatbot = () => {
     if (q.includes('contact') || q.includes('email') || q.includes('phone') || q.includes('reach')) {
       return {
         type: 'contact',
-        content: `**Contact Information** 📞\n\n• **Email:** ${knowledgeBase.personal.email}\n• **Phone:** ${knowledgeBase.personal.phone}\n• **Location:** ${knowledgeBase.personal.location}\n\n**Online Presence:**\n• [LinkedIn](${knowledgeBase.links.linkedin})\n• [GitHub](${knowledgeBase.links.github})`
+        content: `Contact Information 📞\n\n• Email: ${knowledgeBase.personal.email}\n• Phone: ${knowledgeBase.personal.phone}\n• Location: ${knowledgeBase.personal.location}\n\nOnline Presence:\n• [LinkedIn](${knowledgeBase.links.linkedin})\n• [GitHub](${knowledgeBase.links.github})`
       };
     }
 
     // Skills queries
     if (q.includes('skill') || q.includes('technical') || q.includes('programming') || q.includes('tools')) {
       const techSkills = Object.entries(knowledgeBase.skills.technical)
-        .map(([skill, level]) => `• **${skill}** (${level})`)
+        .map(([skill, level]) => `• ${skill} (${level})`)
         .join('\n');
       const softSkills = Object.entries(knowledgeBase.skills.soft)
-        .map(([skill, level]) => `• **${skill}** (${level})`)
+        .map(([skill, level]) => `• ${skill} (${level})`)
         .join('\n');
       
       return {
         type: 'skills',
-        content: `**Technical Skills** 💻\n${techSkills}\n\n**Soft Skills** 🧠\n${softSkills}`
+        content: `Technical Skills 💻\n${techSkills}\n\nSoft Skills 🧠\n${softSkills}`
       };
     }
 
@@ -177,20 +177,20 @@ const TianChatbot = () => {
     if (q.includes('certificate') || q.includes('certification') || q.includes('course') || q.includes('learning')) {
       const aiCerts = knowledgeBase.certificates
         .filter(c => c.category === 'AI')
-        .map(c => `• **${c.name}** - ${c.provider} (${c.date})`)
+        .map(c => `• ${c.name} - ${c.provider} (${c.date})`)
         .join('\n');
       const commCerts = knowledgeBase.certificates
         .filter(c => c.category === 'Communication')
-        .map(c => `• **${c.name}** - ${c.provider} (${c.date})`)
+        .map(c => `• ${c.name} - ${c.provider} (${c.date})`)
         .join('\n');
       const profCerts = knowledgeBase.certificates
         .filter(c => c.category === 'Professional Development')
-        .map(c => `• **${c.name}** - ${c.provider} (${c.date})`)
+        .map(c => `• ${c.name} - ${c.provider} (${c.date})`)
         .join('\n');
       
       return {
         type: 'certificates',
-        content: `**Professional Certificates** 🎓\n\n**AI & Data Science (17 certificates):**\n${aiCerts}\n\n**Communication Skills (8 certificates):**\n${commCerts}\n\n**Professional Development (4 certificates):**\n${profCerts}\n\n**Total:** 29 certificates completed between May-July 2025`
+        content: `Professional Certificates 🎓\n\nAI & Data Science (17 certificates):\n${aiCerts}\n\nCommunication Skills (8 certificates):\n${commCerts}\n\nProfessional Development (4 certificates):\n${profCerts}\n\nTotal: 29 certificates completed between May-July 2025`
       };
     }
 
@@ -198,7 +198,7 @@ const TianChatbot = () => {
     if (q.includes('resume') || q.includes('cv') || q.includes('download')) {
       return {
         type: 'documents',
-        content: `**Documents** 📄\n\n• [**View Resume/CV**](${knowledgeBase.links.resume})\n• [**View Degree Certificate**](${knowledgeBase.links.degree})\n\nThese documents contain detailed information about Tian's experience, education, and qualifications.`
+        content: `Documents 📄\n\n• [View Resume/CV](${knowledgeBase.links.resume})\n• [View Degree Certificate](${knowledgeBase.links.degree})\n\nThese documents contain detailed information about Tian's experience, education, and qualifications.`
       };
     }
 
@@ -252,43 +252,75 @@ const TianChatbot = () => {
   };
 
   const formatMessage = (content) => {
-    // Convert markdown-style formatting to JSX
-    const parts = content.split(/(\*\*.*?\*\*|\[.*?\]\(.*?\)|🔗.*?\)|[🌟💻🧠🚀🎓📄🤖😊👤🛠️📞])/g);
+    // First, let's handle the links properly by finding them before splitting
+    const linkRegex = /\[([^\]]+)\]\(([^)]+)\)/g;
+    const links = [];
+    let match;
+    
+    // Extract all links and replace them with placeholders
+    let processedContent = content;
+    let linkIndex = 0;
+    
+    while ((match = linkRegex.exec(content)) !== null) {
+      const linkText = match[1];
+      const linkUrl = match[2];
+      const placeholder = `__LINK_${linkIndex}__`;
+      
+      links.push({
+        text: linkText,
+        url: linkUrl,
+        placeholder: placeholder
+      });
+      
+      processedContent = processedContent.replace(match[0], placeholder);
+      linkIndex++;
+    }
+    
+    // Now split the content, but preserve the link placeholders
+    const parts = processedContent.split(/(\*\*.*?\*\*|__LINK_\d+__|[🌟💻🧠🚀🎓📄🤖😊👤🛠️📞])/g);
     
     return parts.map((part, index) => {
+      // Handle bold text
       if (part.startsWith('**') && part.endsWith('**')) {
         return <strong key={index} className="text-blue-400">{part.slice(2, -2)}</strong>;
-      } else if (part.match(/\[.*?\]\(.*?\)/)) {
-        const match = part.match(/\[(.*?)\]\((.*?)\)/);
-        if (match) {
+      }
+      
+      // Handle link placeholders
+      if (part.startsWith('__LINK_') && part.endsWith('__')) {
+        const linkData = links.find(link => link.placeholder === part);
+        if (linkData) {
           return (
             <a 
               key={index} 
-              href={match[2]} 
+              href={linkData.url} 
               target="_blank" 
               rel="noopener noreferrer"
               className="text-blue-400 hover:text-blue-300 underline inline-flex items-center gap-1 transition-colors"
             >
-              {match[1]} <ExternalLink size={12} />
-            </a>
-          );
-        }
-      } else if (part.match(/🔗.*?\)/)) {
-        const match = part.match(/🔗\s*\[(.*?)\]\((.*?)\)/);
-        if (match) {
-          return (
-            <a 
-              key={index} 
-              href={match[2]} 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="text-blue-400 hover:text-blue-300 underline inline-flex items-center gap-1 ml-2 transition-colors"
-            >
-              🔗 {match[1]} <ExternalLink size={12} />
+              {linkData.text} <ExternalLink size={12} />
             </a>
           );
         }
       }
+      
+      // Handle special link format with 🔗
+      if (part.includes('🔗') && part.includes('[') && part.includes(']')) {
+        const linkMatch = part.match(/🔗\s*\[(.*?)\]\((.*?)\)/);
+        if (linkMatch) {
+          return (
+            <a 
+              key={index} 
+              href={linkMatch[2]} 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="text-blue-400 hover:text-blue-300 underline inline-flex items-center gap-1 ml-2 transition-colors"
+            >
+              🔗 {linkMatch[1]} <ExternalLink size={12} />
+            </a>
+          );
+        }
+      }
+      
       return part;
     });
   };
@@ -307,7 +339,7 @@ const TianChatbot = () => {
 
       {/* Chat Window */}
       {isOpen && (
-        <div className="bg-slate-800 rounded-lg shadow-2xl w-96 h-[500px] flex flex-col border border-slate-700/50 backdrop-blur-sm">
+        <div className="bg-slate-800 rounded-lg shadow-2xl w-96 h-[500px] flex flex-col border border-slate-700/50 backdrop-blur-sm overflow-x-hidden">
           {/* Header */}
           <div className="bg-gradient-to-r from-slate-900 to-slate-800 text-white p-4 rounded-t-lg flex justify-between items-center border-b border-slate-700/50">
             <div className="flex items-center gap-2">
@@ -328,7 +360,7 @@ const TianChatbot = () => {
           </div>
 
           {/* Messages */}
-          <div className="flex-1 overflow-y-auto p-4 space-y-4 bg-slate-800">
+          <div className="flex-1 overflow-y-auto p-4 space-y-4 bg-slate-800 overflow-x-hidden">
             {messages.map((message, index) => (
               <div
                 key={index}

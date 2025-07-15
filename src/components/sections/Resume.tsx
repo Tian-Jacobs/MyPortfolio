@@ -5,22 +5,14 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 
 const workExperience = [
   {
-    title: "IT Demand Learnership Participant",
-    company: "CAPACITI - IT Demand Learnership Programmes 2025",
-    location: "Cape Town, South Africa",
-    duration: "6-12 Months",
-    description:
-      "Completed the CAPACITI IT Demand Learnership, focusing on Data Analytics and Machine Learning.",
+    title: "Demand Candidate",
+    company: "CAPACITI",
+    duration: "Present",
+    description: "Currently participating in CAPACITI's program to develop tech skills, engage in personal development, and gain valuable work experience in the data analysis field.",
     achievements: [
-      "Hands-on projects and real-world data experience.",
-      "Collaborated with mentors and peers on team-based tasks.",
-      "Attended workshops and professional development sessions.",
-      "Built strong technical and workplace skills.",
-      "Received career guidance and industry certifications."
-    ],
-    skills: [
-      "Data Analytics, Machine Learning, Microsoft Office.",
-      "Critical thinking, teamwork, communication, adaptability, time management."
+      "Proficient in Microsoft Excel, MATLAB, and R Studio",
+      "Programming experience in Java and Python",
+      "Developing knowledge of SQL database queries and Tableau visualization"
     ]
   }
 ];
@@ -37,7 +29,7 @@ const Resume = () => {
         <div className="mb-12">
           <div className="flex justify-center mb-8">
             <a 
-              href="https://firebasestorage.googleapis.com/v0/b/dialogflow-chatbot-75b84.firebasestorage.app/o/CV%20Tian%20Josh%20Jacobs.pdf?alt=media&token=d984645a-28f1-4d50-a8aa-701fadc1f632" 
+              href="https://firebasestorage.googleapis.com/v0/b/dialogflow-chatbot-75b84.firebasestorage.app/o/2025%20Candidate%20CV%20(Tian%20Jacobs).pdf?alt=media&token=d49d6b6c-f99d-4c6b-a412-e4206ce99ed2" 
               target="_blank" 
               rel="noopener noreferrer"
               className="inline-block"
@@ -64,22 +56,12 @@ const Resume = () => {
                 </CardHeader>
                 <CardContent>
                   <p className="mb-4">{job.description}</p>
-                  <h4 className="font-semibold mb-2">Key Responsibilities & Achievements:</h4>
-                  <ul className="list-disc pl-5 space-y-1 mb-4">
+                  <h4 className="font-semibold mb-2">Key Skills:</h4>
+                  <ul className="list-disc pl-5 space-y-1">
                     {job.achievements.map((achievement, i) => (
                       <li key={i} className="text-muted-foreground">{achievement}</li>
                     ))}
                   </ul>
-                  {job.skills && (
-                    <>
-                      <h4 className="font-semibold mb-2">Skills Developed:</h4>
-                      <ul className="list-disc pl-5 space-y-1">
-                        {job.skills.map((skill, i) => (
-                          <li key={i} className="text-muted-foreground">{skill}</li>
-                        ))}
-                      </ul>
-                    </>
-                  )}
                 </CardContent>
               </Card>
             ))}

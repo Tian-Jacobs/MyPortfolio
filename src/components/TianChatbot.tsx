@@ -115,7 +115,7 @@ const TianChatbot = () => {
       resume: "https://firebasestorage.googleapis.com/v0/b/dialogflow-chatbot-75b84.firebasestorage.app/o/CV%20Tian%20Josh%20Jacobs.pdf?alt=media&token=d984645a-28f1-4d50-a8aa-701fadc1f632",
       degree: "https://firebasestorage.googleapis.com/v0/b/dialogflow-chatbot-75b84.firebasestorage.app/o/Degree.pdf?alt=media&token=e2dd275d-749e-4072-906c-6481458ddfd9",
       linkedin: "https://www.linkedin.com/in/tian-jacobs",
-      github: "https://github.com/BlessedT99"
+      github: "https://github.com/TianJacobs"
     }
   };
 

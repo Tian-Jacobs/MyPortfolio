@@ -112,10 +112,10 @@ const TianChatbot = () => {
       { name: "Entrepreneurship", provider: "YES (Youth Employment Service)", date: "June 20, 2025", category: "Professional Development" }
     ],
     links: {
-      resume: "https://firebasestorage.googleapis.com/v0/b/dialogflow-chatbot-75b84.firebasestorage.app/o/Tian_Jacobs_Resume_2025.pdf.pdf?alt=media&token=c1cfaf96-9ad9-4861-b091-7a3f29fad6ba",
+      resume: "https://firebasestorage.googleapis.com/v0/b/dialogflow-chatbot-75b84.firebasestorage.app/o/Tian_Jacobs_Resume_2025.pdf?alt=media&token=19a56745-53e5-4db0-b8ba-a14984a5e5a0",
       degree: "https://firebasestorage.googleapis.com/v0/b/dialogflow-chatbot-75b84.firebasestorage.app/o/Degree.pdf?alt=media&token=e2dd275d-749e-4072-906c-6481458ddfd9",
       linkedin: "https://www.linkedin.com/in/tian-jacobs",
-      github: "https://github.com/TianJacobs"
+      github: "https://github.com/Tian-Jacobs"
     }
   };
 

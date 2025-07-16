@@ -29,7 +29,7 @@ const Resume = () => {
         <div className="mb-12">
           <div className="flex justify-center mb-8">
             <a 
-              href="https://firebasestorage.googleapis.com/v0/b/dialogflow-chatbot-75b84.firebasestorage.app/o/2025%20Candidate%20CV%20(Tian%20Jacobs).pdf?alt=media&token=d49d6b6c-f99d-4c6b-a412-e4206ce99ed2" 
+              href="https://firebasestorage.googleapis.com/v0/b/dialogflow-chatbot-75b84.firebasestorage.app/o/Tian_Jacobs_Resume_2025.pdf.pdf?alt=media&token=c1cfaf96-9ad9-4861-b091-7a3f29fad6ba" 
               target="_blank" 
               rel="noopener noreferrer"
               className="inline-block"

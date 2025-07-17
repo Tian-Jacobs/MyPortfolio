@@ -116,7 +116,7 @@ const TianChatbot = () => {
       { name: "Introduction to Data Engineering", provider: "IBM", date: "July 17, 2025", category: "Professional Development" }
     ],
     links: {
-      resume: "https://firebasestorage.googleapis.com/v0/b/dialogflow-chatbot-75b84.firebasestorage.app/o/Tian_Jacobs_Resume_2025.pdf?alt=media&token=042a8d14-fc51-48da-81dd-cec3252283ae",
+      resume: "https://firebasestorage.googleapis.com/v0/b/dialogflow-chatbot-75b84.firebasestorage.app/o/Tian_Jacobs_Resume_2025.pdf?alt=media&token=6fe7bcbd-2eee-44ef-9379-4c66ef2c3a08",
       degree: "https://firebasestorage.googleapis.com/v0/b/dialogflow-chatbot-75b84.firebasestorage.app/o/Degree.pdf?alt=media&token=e2dd275d-749e-4072-906c-6481458ddfd9",
       linkedin: "https://www.linkedin.com/in/tian-jacobs",
       github: "https://github.com/BlessedT99"

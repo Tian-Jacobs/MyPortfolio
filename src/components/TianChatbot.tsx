@@ -1,3 +1,4 @@
+
 import React, { useState, useRef, useEffect } from 'react';
 import { MessageCircle, Send, X, User, Bot, ExternalLink } from 'lucide-react';
 
@@ -98,6 +99,7 @@ const TianChatbot = () => {
       { name: "Managing Machine Learning Projects", provider: "Duke University", date: "July 6, 2025", category: "AI" },
       { name: "Human Factors in AI", provider: "Duke University", date: "July 7, 2025", category: "AI" },
       { name: "Trustworthy AI: Managing Bias, Ethics, and Accountability", provider: "Johns Hopkins University", date: "July 8, 2025", category: "AI" },
+      { name: "Introduction to Data Engineering", provider: "IBM", date: "July 17, 2025", category: "AI" },
       { name: "Verbal Communication and Presentation Skills", provider: "Starweaver", date: "May 19, 2025", category: "Communication" },
       { name: "Writing Professional Emails in English", provider: "Georgia Institute of Technology", date: "May 19, 2025", category: "Communication" },
       { name: "Active Listening", provider: "Coursera", date: "May 30, 2025", category: "Communication" },
@@ -109,13 +111,15 @@ const TianChatbot = () => {
       { name: "Time Management for Personal & Professional Productivity", provider: "Division of Continuing Education", date: "June 13, 2025", category: "Professional Development" },
       { name: "Work Readiness", provider: "YES (Youth Employment Service)", date: "June 16, 2025", category: "Professional Development" },
       { name: "Digital Learning", provider: "YES (Youth Employment Service)", date: "June 17, 2025", category: "Professional Development" },
-      { name: "Entrepreneurship", provider: "YES (Youth Employment Service)", date: "June 20, 2025", category: "Professional Development" }
+      { name: "Entrepreneurship", provider: "YES (Youth Employment Service)", date: "June 20, 2025", category: "Professional Development" },
+      { name: "AI Bootcamp", provider: "Coursera", date: "July 8, 2025", category: "Professional Development" },
+      { name: "Introduction to Data Engineering", provider: "IBM", date: "July 17, 2025", category: "Professional Development" }
     ],
     links: {
-      resume: "https://firebasestorage.googleapis.com/v0/b/dialogflow-chatbot-75b84.firebasestorage.app/o/Tian_Jacobs_Resume_2025.pdf?alt=media&token=08f7562c-06d9-4afa-886c-7e413cadaf92",
+      resume: "https://firebasestorage.googleapis.com/v0/b/dialogflow-chatbot-75b84.firebasestorage.app/o/Tian_Jacobs_Resume_2025.pdf?alt=media&token=042a8d14-fc51-48da-81dd-cec3252283ae",
       degree: "https://firebasestorage.googleapis.com/v0/b/dialogflow-chatbot-75b84.firebasestorage.app/o/Degree.pdf?alt=media&token=e2dd275d-749e-4072-906c-6481458ddfd9",
       linkedin: "https://www.linkedin.com/in/tian-jacobs",
-      github: "https://github.com/Tian-Jacobs"
+      github: "https://github.com/BlessedT99"
     }
   };
 
@@ -164,12 +168,12 @@ const TianChatbot = () => {
     // Projects queries
     if (q.includes('project') || q.includes('work') || q.includes('portfolio') || q.includes('built')) {
       const projectList = knowledgeBase.projects
-        .map(p => `**${p.name}**\n${p.description}\n🔗 [View Project](${p.url})`)
+        .map(p => `${p.name}\n${p.description}\n🔗 [View Project](${p.url})`)
         .join('\n\n');
       
       return {
         type: 'projects',
-        content: `**Projects & Work Samples** 🚀\n\n${projectList}`
+        content: `Projects & Work Samples 🚀\n\n${projectList}`
       };
     }
 
@@ -190,7 +194,7 @@ const TianChatbot = () => {
       
       return {
         type: 'certificates',
-        content: `Professional Certificates 🎓\n\nAI & Data Science (17 certificates):\n${aiCerts}\n\nCommunication Skills (8 certificates):\n${commCerts}\n\nProfessional Development (4 certificates):\n${profCerts}\n\nTotal: 29 certificates completed between May-July 2025`
+        content: `Professional Certificates 🎓\n\nAI & Data Science (18 certificates):\n${aiCerts}\n\nCommunication Skills (8 certificates):\n${commCerts}\n\nProfessional Development (8 certificates):\n${profCerts}\n\nTotal: 34 certificates completed between May-July 2025`
       };
     }
 
@@ -206,14 +210,14 @@ const TianChatbot = () => {
     if (q.includes('ai') || q.includes('data') || q.includes('python') || q.includes('machine learning')) {
       return {
         type: 'ai_expertise',
-        content: `**AI & Data Science Expertise** 🤖\n\n**Certifications:** 17 AI-related certificates from Intel, DeepLearning.AI, Google Cloud, AWS, IBM, Johns Hopkins University, Microsoft, Duke University, and CAPACITI\n\n**Key Skills:**\n• Python programming for data science\n• AI concepts and applications\n• Generative AI technologies\n• Large Language Models\n• AI ethics and bias management\n• Trustworthy AI development\n• AI and Public Health applications\n• Machine Learning project management\n• Microsoft Azure AI solutions\n• Human factors in AI design\n• Chatbot development\n• Data analysis with R Studio and MATLAB\n\n**Projects:** Built intelligent chatbots, AI-powered applications, and data analysis tools.`
+        content: `AI & Data Science Expertise 🤖\n\nCertifications: 18 AI-related certificates from Intel, DeepLearning.AI, Google Cloud, AWS, IBM, Johns Hopkins University, Microsoft, Duke University, Coursera, and CAPACITI\n\nKey Skills:\n• Python programming for data science\n• AI concepts and applications\n• Data Engineering fundamentals\n• Generative AI technologies\n• Large Language Models\n• AI ethics and bias management\n• Trustworthy AI development\n• AI and Public Health applications\n• Machine Learning project management\n• Microsoft Azure AI solutions\n• Human factors in AI design\n• Chatbot development\n• Data analysis with R Studio and MATLAB\n• AI Bootcamp completion with Agile Scrum methodology\n\nProjects: Built comprehensive portfolio with 4-5 deployed AI tools, including intelligent chatbots, sentiment analysis dashboards, and end-to-end AI solutions.`
       };
     }
 
     // Default helpful response
     return {
       type: 'help',
-      content: `I can help you learn about Tian Jacobs! 😊\n\n**Ask me about:**\n• 👤 Personal background and bio\n• 🛠️ Technical skills and tools\n• 🚀 Projects and work samples\n• 🎓 Certificates and education\n• 📞 Contact information\n• 🤖 AI and data science experience\n• 📄 Resume and documents\n\n**Try asking:** "What skills does Tian have?" or "Show me Tian's projects"`
+      content: `I can help you learn about Tian Jacobs! 😊\n\nAsk me about:\n• 👤 Personal background and bio\n• 🛠️ Technical skills and tools\n• 🚀 Projects and work samples\n• 🎓 Certificates and education\n• 📞 Contact information\n• 🤖 AI and data science experience\n• 📄 Resume and documents\n\nTry asking: "What skills does Tian have?" or "Show me Tian's projects"`
     };
   };
 
@@ -252,75 +256,41 @@ const TianChatbot = () => {
   };
 
   const formatMessage = (content) => {
-    // First, let's handle the links properly by finding them before splitting
-    const linkRegex = /\[([^\]]+)\]\(([^)]+)\)/g;
-    const links = [];
-    let match;
-    
-    // Extract all links and replace them with placeholders
-    let processedContent = content;
-    let linkIndex = 0;
-    
-    while ((match = linkRegex.exec(content)) !== null) {
-      const linkText = match[1];
-      const linkUrl = match[2];
-      const placeholder = `__LINK_${linkIndex}__`;
-      
-      links.push({
-        text: linkText,
-        url: linkUrl,
-        placeholder: placeholder
-      });
-      
-      processedContent = processedContent.replace(match[0], placeholder);
-      linkIndex++;
-    }
-    
-    // Now split the content, but preserve the link placeholders
-    const parts = processedContent.split(/(\*\*.*?\*\*|__LINK_\d+__|[🌟💻🧠🚀🎓📄🤖😊👤🛠️📞])/g);
+    // Convert markdown-style formatting to JSX, but remove ** for bold formatting
+    const parts = content.split(/(\[.*?\]\(.*?\)|🔗.*?\)|[🌟💻🧠🚀🎓📄🤖😊👤🛠️📞])/g);
     
     return parts.map((part, index) => {
-      // Handle bold text
-      if (part.startsWith('**') && part.endsWith('**')) {
-        return <strong key={index} className="text-blue-400">{part.slice(2, -2)}</strong>;
-      }
-      
-      // Handle link placeholders
-      if (part.startsWith('__LINK_') && part.endsWith('__')) {
-        const linkData = links.find(link => link.placeholder === part);
-        if (linkData) {
+      if (part.match(/\[.*?\]\(.*?\)/)) {
+        const match = part.match(/\[(.*?)\]\((.*?)\)/);
+        if (match) {
           return (
             <a 
               key={index} 
-              href={linkData.url} 
+              href={match[2]} 
               target="_blank" 
               rel="noopener noreferrer"
               className="text-blue-400 hover:text-blue-300 underline inline-flex items-center gap-1 transition-colors"
             >
-              {linkData.text} <ExternalLink size={12} />
+              {match[1]} <ExternalLink size={12} />
             </a>
           );
         }
-      }
-      
-      // Handle special link format with 🔗
-      if (part.includes('🔗') && part.includes('[') && part.includes(']')) {
-        const linkMatch = part.match(/🔗\s*\[(.*?)\]\((.*?)\)/);
-        if (linkMatch) {
+      } else if (part.match(/🔗.*?\)/)) {
+        const match = part.match(/🔗\s*\[(.*?)\]\((.*?)\)/);
+        if (match) {
           return (
             <a 
               key={index} 
-              href={linkMatch[2]} 
+              href={match[2]} 
               target="_blank" 
               rel="noopener noreferrer"
               className="text-blue-400 hover:text-blue-300 underline inline-flex items-center gap-1 ml-2 transition-colors"
             >
-              🔗 {linkMatch[1]} <ExternalLink size={12} />
+              🔗 {match[1]} <ExternalLink size={12} />
             </a>
           );
         }
       }
-      
       return part;
     });
   };
@@ -339,7 +309,7 @@ const TianChatbot = () => {
 
       {/* Chat Window */}
       {isOpen && (
-        <div className="bg-slate-800 rounded-lg shadow-2xl w-96 h-[500px] flex flex-col border border-slate-700/50 backdrop-blur-sm overflow-x-hidden">
+        <div className="bg-slate-800 rounded-lg shadow-2xl w-96 h-[500px] flex flex-col border border-slate-700/50 backdrop-blur-sm">
           {/* Header */}
           <div className="bg-gradient-to-r from-slate-900 to-slate-800 text-white p-4 rounded-t-lg flex justify-between items-center border-b border-slate-700/50">
             <div className="flex items-center gap-2">
@@ -360,7 +330,7 @@ const TianChatbot = () => {
           </div>
 
           {/* Messages */}
-          <div className="flex-1 overflow-y-auto p-4 space-y-4 bg-slate-800 overflow-x-hidden">
+          <div className="flex-1 overflow-y-auto p-4 space-y-4 bg-slate-800">
             {messages.map((message, index) => (
               <div
                 key={index}

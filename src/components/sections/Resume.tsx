@@ -8,7 +8,7 @@ const workExperience = [
     title: "IT Demand Learnership Programme",
     company: "CAPACITI",
     duration: "April 2025 - Present",
-    description: "Participating an intensive 12-month learnership programme in Data Fundamentals & Analytics, including a specialized 2-month AI Bootcamp. Developed job-ready skills through hands-on projects, agile methodology, and real-world applications.",
+    description: "Participating in an intensive 12-month learnership programme in Data Fundamentals & Analytics, including a specialized 2-month AI Bootcamp. Developed job-ready skills through hands-on projects, agile methodology, and real-world applications.",
     achievements: [
       "Built comprehensive portfolio with 4-5 deployed AI tools",
       "Completed AI Bootcamp using Agile Scrum methodology (May-June 2025)",
@@ -17,15 +17,32 @@ const workExperience = [
       "Created AI applications using GPT-4, Streamlit, and no-code platforms (Teachable Machine, Dialogflow)",
       "Conducted bias audits and ethical AI assessments using IBM Fairness 360",
       "Participated in daily standups, sprint reviews, and technical presentations",
-      "Obtained industry certifications in data analytics and AI/ML domains",
+      "Obtained industry certifications in data analytics and AI/ML domains"
     ],
-    technicalAchievements: [
+    technicalSkills: [
       "Developed web applications using Python, HTML/CSS, and JavaScript",
       "Implemented AI/ML solutions with OpenAI GPT-4, Hugging Face, TensorFlow, and Teachable Machine",
       "Performed statistical analysis, data visualization, and managed databases",
       "Built and deployed projects with Git, Jupyter Notebooks, Streamlit, Gradio, and AWS Comprehend",
-      "Applied Agile Scrum methodology, version control, and created technical documentation",
+      "Applied Agile Scrum methodology, version control, and created technical documentation"
     ]
+  }
+];
+
+const certifications = [
+  {
+    title: "AI Bootcamp",
+    provider: "Coursera",
+    date: "July 8, 2025",
+    description: "Intensive bootcamp covering AI fundamentals, machine learning, and practical applications.",
+    link: "https://firebasestorage.googleapis.com/v0/b/dialogflow-chatbot-75b84.firebasestorage.app/o/AI%20Bootcamp%20completion%20badge.png?alt=media&token=0a944853-f527-489f-9867-b615c5975b14"
+  },
+  {
+    title: "Introduction to Data Engineering",
+    provider: "IBM",
+    date: "July 17, 2025",
+    description: "Comprehensive introduction to data engineering concepts, tools, and best practices.",
+    link: "https://firebasestorage.googleapis.com/v0/b/dialogflow-chatbot-75b84.firebasestorage.app/o/Coursera%20Certificate%20-%20Introduction%20to%20Data%20Engineering.pdf?alt=media&token=d6faed4f-8c4d-413f-afb9-1eb9a55a3281"
   }
 ];
 
@@ -41,7 +58,7 @@ const Resume = () => {
         <div className="mb-12">
           <div className="flex justify-center mb-8">
             <a 
-              href="https://firebasestorage.googleapis.com/v0/b/dialogflow-chatbot-75b84.firebasestorage.app/o/Tian_Jacobs_Resume_2025.pdf?alt=media&token=08f7562c-06d9-4afa-886c-7e413cadaf92" 
+              href="https://firebasestorage.googleapis.com/v0/b/dialogflow-chatbot-75b84.firebasestorage.app/o/Tian_Jacobs_Resume_2025.pdf?alt=media&token=042a8d14-fc51-48da-81dd-cec3252283ae" 
               target="_blank" 
               rel="noopener noreferrer"
               className="inline-block"
@@ -68,23 +85,22 @@ const Resume = () => {
                 </CardHeader>
                 <CardContent>
                   <p className="mb-4">{job.description}</p>
-                  <h4 className="font-semibold mb-2">Key Skills:</h4>
-                  <ul className="list-disc pl-5 space-y-1">
+                  <h4 className="font-semibold mb-2">Key Skills & Achievements:</h4>
+                  <ul className="list-disc pl-5 space-y-1 mb-4">
                     {job.achievements.map((achievement, i) => (
                       <li key={i} className="text-muted-foreground">{achievement}</li>
                     ))}
                   </ul>
-                </CardContent>
-                <CardContent>
                   <h4 className="font-semibold mb-2">Technical Skills:</h4>
                   <ul className="list-disc pl-5 space-y-1">
-                    {job.technicalAchievements && job.technicalAchievements.map((achievement, i) => (
-                      <li key={i} className="text-muted-foreground">{achievement}</li>
+                    {job.technicalSkills.map((skill, i) => (
+                      <li key={i} className="text-muted-foreground">{skill}</li>
                     ))}
                   </ul>
                 </CardContent>
               </Card>
             ))}
+
           </div>
         </div>
       </div>

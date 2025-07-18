@@ -43,9 +43,9 @@ const About = () => {
               }
               secondContent={
                 <img 
-                  src="https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
-                  alt="Working on laptop"
-                  className="w-full h-full object-cover rounded-[15px]"
+                  src="https://i.ibb.co/HLmpsFkK/Problem-Solving-Quotes-To-Solve-The-Problem-In-Your-Own-Way-jpg-9e684b8d5fe54ec921ecc4dc6821b8d0.jpg"
+                  alt="Problem solving motivation"
+                  className="w-full h-full object-fill rounded-[15px]"
                 />
               }
               gridSize={8}

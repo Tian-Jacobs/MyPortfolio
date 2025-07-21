@@ -113,7 +113,8 @@ const TianChatbot = () => {
       { name: "Digital Learning", provider: "YES (Youth Employment Service)", date: "June 17, 2025", category: "Professional Development" },
       { name: "Entrepreneurship", provider: "YES (Youth Employment Service)", date: "June 20, 2025", category: "Professional Development" },
       { name: "AI Bootcamp", provider: "Coursera", date: "July 8, 2025", category: "Professional Development" },
-      { name: "Introduction to Data Engineering", provider: "IBM", date: "July 17, 2025", category: "Professional Development" }
+      { name: "Introduction to Data Engineering", provider: "IBM", date: "July 17, 2025", category: "Professional Development" },
+      { name: "Python Project for Data Engineering", provider: "IBM", date: "July 21, 2025", category: "Professional Development" }
     ],
     links: {
       resume: "https://firebasestorage.googleapis.com/v0/b/dialogflow-chatbot-75b84.firebasestorage.app/o/Tian_Jacobs_Resume_2025.pdf?alt=media&token=6fe7bcbd-2eee-44ef-9379-4c66ef2c3a08",

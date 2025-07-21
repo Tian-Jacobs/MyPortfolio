@@ -232,6 +232,13 @@ const certificationsRaw = [
     date: "July 17, 2025",
     description: "Comprehensive introduction to data engineering concepts, tools, and best practices.",
     link: "https://firebasestorage.googleapis.com/v0/b/dialogflow-chatbot-75b84.firebasestorage.app/o/Coursera%20Certificate%20-%20Introduction%20to%20Data%20Engineering.pdf?alt=media&token=d6faed4f-8c4d-413f-afb9-1eb9a55a3281"
+  },
+  {
+    name: "Python Project for Data Engineering",
+    issuer: "IBM",
+    date: "July 21, 2025",
+    description: "Hands-on Python project course focused on practical data engineering applications and real-world implementations.",
+    link: "https://firebasestorage.googleapis.com/v0/b/dialogflow-chatbot-75b84.firebasestorage.app/o/Coursera%20Certificate%20-%20Python%20Project%20for%20Data%20Engineering.pdf?alt=media&token=17fd469a-3778-43f3-960b-75dec2577e4b"
   }
 ];
 

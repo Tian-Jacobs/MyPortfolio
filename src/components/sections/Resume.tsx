@@ -29,23 +29,6 @@ const workExperience = [
   }
 ];
 
-const certifications = [
-  {
-    title: "AI Bootcamp",
-    provider: "Coursera",
-    date: "July 8, 2025",
-    description: "Intensive bootcamp covering AI fundamentals, machine learning, and practical applications.",
-    link: "https://firebasestorage.googleapis.com/v0/b/dialogflow-chatbot-75b84.firebasestorage.app/o/AI%20Bootcamp%20completion%20badge.png?alt=media&token=0a944853-f527-489f-9867-b615c5975b14"
-  },
-  {
-    title: "Introduction to Data Engineering",
-    provider: "IBM",
-    date: "July 17, 2025",
-    description: "Comprehensive introduction to data engineering concepts, tools, and best practices.",
-    link: "https://firebasestorage.googleapis.com/v0/b/dialogflow-chatbot-75b84.firebasestorage.app/o/Coursera%20Certificate%20-%20Introduction%20to%20Data%20Engineering.pdf?alt=media&token=d6faed4f-8c4d-413f-afb9-1eb9a55a3281"
-  }
-];
-
 const Resume = () => {
   return (
     <section id="resume" className="bg-muted/30">

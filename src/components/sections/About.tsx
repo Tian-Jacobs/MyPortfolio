@@ -12,8 +12,8 @@ const About = () => {
           <h2 className="section-title">About Me</h2>
         </div>
         
-        <div className="grid md:grid-cols-2 gap-8 items-start">
-          <div className="space-y-6">
+        <div className="grid md:grid-cols-3 gap-8 items-start">
+          <div className="md:col-span-2 space-y-6">
             <h3 className="section-subtitle">Professional Bio</h3>
             <p className="text-muted-foreground">
               Tian Jacobs is a data analysis professional specializing in extracting meaningful insights from complex datasets. With a strong foundation in technical tools and analytical methodologies, they excel at transforming raw data into actionable information.
@@ -36,22 +36,22 @@ const About = () => {
             <PixelTransition
               firstContent={
                 <img 
-                  src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
-                  alt="Professional headshot"
-                  className="w-full h-full object-cover rounded-[15px]"
+                  src="/lovable-uploads/IMG20250721171126-removebg-preview.png"
+                  alt="Tian Jacobs - Professional headshot"
+                  className="w-full h-full object-cover rounded-full"
                 />
               }
               secondContent={
                 <img 
-                  src="https://i.ibb.co/HLmpsFkK/Problem-Solving-Quotes-To-Solve-The-Problem-In-Your-Own-Way-jpg-9e684b8d5fe54ec921ecc4dc6821b8d0.jpg"
+                  src="/lovable-uploads/Problem-Solving-Quotes-To-Solve-The-Problem-In-Your-Own-Way-jpg-9e684b8d5fe54ec921ecc4dc6821b8d0.jpg"
                   alt="Problem solving motivation"
-                  className="w-full h-full object-fill rounded-[15px]"
+                  className="w-full h-full object-fill rounded-full"
                 />
               }
               gridSize={8}
               pixelColor="#3b82f6"
               animationStepDuration={0.4}
-              className="w-full max-w-xl mx-auto"
+              className="w-full max-w-sm mx-auto rounded-full"
               aspectRatio="100%"
             />
           </div>

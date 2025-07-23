@@ -21,7 +21,7 @@ const contactInfo = [
     icon: <MapPin className="h-5 w-5" />,
     label: "Location",
     value: "Kuils River, Western Cape, South Africa",
-    link: undefined,
+    link: "https://www.google.com/maps/place/Kuils+River,+Cape+Town/@-33.961681,18.7053359,12z/data=!3m1!4b1!4m6!3m5!1s0x1dcc4e29bcb32c1f:0x2661e5909deb3e!8m2!3d-33.9227312!4d18.6898045!16zL20vMDg5OXB0?entry=ttu&g_ep=EgoyMDI1MDcxNi4wIKXMDSoASAFQAw%3D%3D",
   },
 ];
 
